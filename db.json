@@ -34,6 +34,34 @@
       "email": "gomez@gmail.com",
       "password": "gomez1234",
       "dob": "1986-07-09"
+    },
+    {
+      "id": 6,
+      "username": "Thamizh",
+      "email": "thamizh@gmail.com",
+      "password": "Thamizh123",
+      "dob": "1998-05-07"
+    },
+    {
+      "id": 7,
+      "username": "Dhilip",
+      "email": "dhilip@gmail.com",
+      "password": "Dhilip123",
+      "dob": "1982-10-10"
+    },
+    {
+      "id": 8,
+      "username": "Sathieaswarram",
+      "email": "sathiyaram@gmail.com",
+      "password": "sathiyaram123",
+      "dob": "1998-11-02"
+    },
+    {
+      "id": 9,
+      "username": "Chandru",
+      "email": "chandru@gmail.com",
+      "password": "chandru123",
+      "dob": "1998-09-11"
     }
   ],
   "comments": [

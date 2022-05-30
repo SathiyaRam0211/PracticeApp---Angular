@@ -35,7 +35,10 @@ export class SignupComponent implements OnInit {
      console.log(res);
      alert("User added successfully");
      this.signupForm.reset();
-   })
+     this.signupForm.markAsPristine();
+     this.signupForm.markAsUntouched();
+   });
+   
   }
 
   

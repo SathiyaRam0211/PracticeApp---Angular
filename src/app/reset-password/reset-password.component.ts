@@ -37,10 +37,13 @@ export class ResetPasswordComponent implements OnInit {
       this.resetpasswordObject.email = res[0].email;
       this.resetpasswordObject.password = this.resetpasswordForm.value.newPassword;
       this.resetpasswordObject.dob = res[0].dob;
+      
       this.api.updateUser(this.resetpasswordObject, res[0].id).subscribe(res=>{
         console.log(res);
         alert("Password reset successfully");
         this.resetpasswordForm.reset();
+        this.resetpasswordForm.markAsPristine();
+        this.resetpasswordForm.markAsUntouched();
       })
     });  
   }

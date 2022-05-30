@@ -5,7 +5,7 @@
              Register
         </h1>
         <div class="d-flex form-box col">
-            <form [formGroup]="signupForm" (ngSubmit)="userSignup()">
+            <form [formGroup]="signupForm">
                 <div class="mb-3">
                     <mat-form-field>
                         <mat-label>Username</mat-label>
@@ -37,7 +37,7 @@
                         <mat-error *ngIf="signupForm.controls['dob'].hasError('required')">Mandatory field.</mat-error>
                     </mat-form-field>
                 </div> 
-                <button mat-raised-button [disabled]="signupForm.invalid" color="" class="d-block btn-sign-in mb-3">
+                <button type="'button" mat-raised-button [disabled]="signupForm.invalid" color="" class="d-block btn-sign-in mb-3" (click)="userSignup()">
                     Sign up
                 </button>
                 <a routerLink="../login" class="link-dark">Existing User? </a> 

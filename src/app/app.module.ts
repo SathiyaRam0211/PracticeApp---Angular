@@ -13,7 +13,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { LoggingInterceptor } from './logging.interceptor';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ {provide: HTTP_INTERCEPTORS, useClass : LoggingInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
