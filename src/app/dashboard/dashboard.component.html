@@ -1,0 +1,22 @@
+<app-navbar [buttonStatus]="true"></app-navbar>
+<div class="container form-container justify-content-center">
+    <h1 class="d-flex form-heading">Welcome!</h1>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th class="col">ID</th>
+                <th class="col">Name</th>
+                <th class="col">Email</th>
+                <th class="col">Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let user of userData">
+                <td class="col">{{user.id}}</td>
+                <td class="col">{{user.username}}</td>
+                <td class="col">{{user.email}}</td>
+                <td class="col">{{user.dob}}</td>
+            </tr>
+        </tbody> 
+    </table>
+</div>

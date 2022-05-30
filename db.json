@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "username": "Viswa Ram",
+      "email": "viswaram.p@gmail.com",
+      "password": "viswanth",
+      "dob": "1997-02-06"
+    },
+    {
+      "id": 2,
+      "username": "Sathiya Ram",
+      "email": "sathiyaram.0211@gmail.com",
+      "password": "Ramwarsathiya",
+      "dob": "1998-11-02"
+    },
+    {
+      "id": 3,
+      "username": "Aravindh",
+      "email": "aravindhsekar.2404@gmail.com",
+      "password": "playinggames",
+      "dob": "1998-04-24"
+    },
+    {
+      "id": 4,
+      "username": "Kaveen",
+      "email": "kaveen.b@gmail.com",
+      "password": "kaveenbala",
+      "dob": "1998-10-20"
+    },
+    {
+      "id": 5,
+      "username": "Gomez",
+      "email": "gomez@gmail.com",
+      "password": "gomez1234",
+      "dob": "1986-07-09"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

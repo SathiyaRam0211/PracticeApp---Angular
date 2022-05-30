@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div class="form-container">
+    <div class="d-flex row">
+        <h1 class="d-flex form-heading">
+             Login
+        </h1>
+        <div class="d-flex form-box col">
+            <form [formGroup]="loginForm" (ngSubmit)="userLogin()">
+                <div class="mb-4">
+                    <mat-form-field>
+                        <mat-label>Username</mat-label>
+                        <input matInput type="text" class="" formControlName = "username">
+                        <mat-error *ngIf="loginForm.controls['username'].hasError('required')">Mandatory field.</mat-error>
+                    </mat-form-field>
+                </div> 
+                <div class="mb-4">
+                    <mat-form-field>
+                        <mat-label>Password</mat-label>
+                        <input matInput type="password" class="" formControlName = "password">
+                        <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Mandatory field.</mat-error>
+                        <mat-error *ngIf="loginForm.controls['password'].hasError('minlength')">Password must have at least 8 characters.</mat-error>
+                        <mat-error *ngIf="loginForm.controls['password'].hasError('maxlength')">Password must not exceed 16 characters.</mat-error>
+                    </mat-form-field>
+                </div> 
+                <button mat-raised-button [disabled]="loginForm.invalid" color="" class="d-block btn-sign-in mb-4">
+                    Sign in
+                </button>
+                <a routerLink= "../signup" class="link-dark">New User? </a>/
+                <a routerLink= "../reset-password" class="link-dark"> Forgot Password</a>  
+            </form>      
+        </div>
+        <div class="d-flex col">
+            <img src="../../assets/loginIllustration.png" class="img-login img-fluid">
+        </div>
+    </div>
+    
+</div>
