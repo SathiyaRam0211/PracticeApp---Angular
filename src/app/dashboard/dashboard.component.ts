@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../shared/api.service';
+import { AuthService } from '../shared/auth.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,9 +10,9 @@ import { ApiService } from '../shared/api.service';
 export class DashboardComponent implements OnInit {
 
   userData !: any;
-  constructor(private api : ApiService) { }
+  constructor(private api : ApiService, private auth: AuthService) { }
   
-
+  loginStatus:boolean = this.auth.isLoggedIn();
   ngOnInit(): void {
     this.getUserDetails();
   }
